@@ -1,150 +1,94 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #fff0f5;
-  color: #4b004b;
+  background: #fff0f5;
+  color: #333;
 }
 
 header {
-  background: linear-gradient(to right, #e0b3dd, #f3c4e0);
+  background: linear-gradient(135deg, #ff99cc, #cc66ff);
+  color: white;
   text-align: center;
   padding: 40px 20px;
 }
 
 header .doctor-photo {
   width: 140px;
+  max-width: 40vw;
+  height: auto;
   border-radius: 50%;
   border: 4px solid #fff;
   margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 2rem;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header .doctor-photo {
+    width: 180px;
+    max-width: 25vw;
+  }
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section#about {
+  background-color: #ffe6f0;
+}
+
+section#services {
+  background-color: #f5e6ff;
+}
+
+section h2 {
+  font-size: 28px;
+  color: #99004d;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+section ul li {
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
   color: #660066;
 }
 
-h2 {
-  color: #990099;
-  text-align: center;
-  margin-top: 40px;
-}
-
-p {
-  font-size: 1rem;
-}
-
-.cta-button {
+a.btn {
   display: inline-block;
-  background-color: #cc33aa;
+  background: #cc66ff;
   color: white;
   padding: 12px 24px;
   margin-top: 20px;
-  border-radius: 30px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
 }
 
-.clinic-info {
-  padding: 30px;
-  max-width: 800px;
-  margin: auto;
-  background-color: #fff8fc;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(204, 51, 170, 0.1);
+a.btn:hover {
+  background: #b300b3;
 }
 
-iframe {
-  width: 100%;
-  height: 300px;
-  margin-top: 20px;
-  border-radius: 10px;
-}
-
-.carousel-container {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
-
-.carousel {
-  position: relative;
-}
-
-.testimonial {
-  display: none;
-  padding: 25px 30px;
-  background-color: #ffe6f1;
-  border-radius: 12px;
-  border-left: 6px solid #c56cf0;
-  font-style: italic;
-  color: #4b004b;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.testimonial.active {
-  display: block;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.testimonial span {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-  color: #a14bb5;
-  text-align: right;
-}
-
-.carousel-controls button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #b30086;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 50%;
-  opacity: 0.8;
-}
-
-#prev { left: -40px; }
-#next { right: -40px; }
-
-.carousel-controls button:hover {
-  background-color: #a14bb5;
-}
-
-.carousel-dots {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #f3c4e0;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.4s;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #c56cf0;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.98); }
-  to { opacity: 1; transform: scale(1); }
+.map-container {
+  margin: 20px 0;
 }
 
 footer {
+  background-color: #ffccff;
   text-align: center;
-  padding: 20px;
-  background-color: #ffe6f1;
-  color: #990099;
-  font-size: 0.9rem;
+  padding: 15px;
+  font-size: 14px;
 }
