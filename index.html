@@ -1,51 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Gynocare - Dr. Shivangi Chaturvedi</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gynocare - Dr. Shivangi Chaturvedi</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Gynocare</h1>
-            <p>Dr. Shivangi Chaturvedi, MBBS, DGO, Dip CosGyn (ICCG)</p>
+  <header>
+    <div class="container">
+      <img src="doctor.jpg" alt="Dr. Shivangi Chaturvedi" class="doctor-photo" />
+      <h1>Dr. Shivangi Chaturvedi</h1>
+      <p>MBBS, DGO, Dip CosGyn (ICCG)</p>
+      <p>Compassionate & Experienced Gynecologist in Pune</p>
+      <a href="https://calendly.com/drshivangichaturvedi/15min" class="cta-button">Book Appointment</a>
+    </div>
+  </header>
+
+  <section class="clinic-info">
+    <h2>Clinic Details</h2>
+    <p><strong>Address:</strong> Office #301 (3rd Floor), Global Business Hub, Kharadi Rd, opposite Dholepatil Farms Road, EON Free Zone, Kharadi, Pune, Maharashtra 411014</p>
+    <p><strong>Phone:</strong> +91-9922253747</p>
+    <p><strong>Timings:</strong><br>Mon–Sat: 10 AM – 12:30 PM, 6 PM – 8:30 PM<br>Sunday: 11:30 AM – 1:30 PM</p>
+    <iframe src="https://www.google.com/maps?q=Gynocare%20Pune&output=embed" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="testimonials">
+    <h2>Patient Testimonials</h2>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="testimonial active">
+          <p>"Thank you Dr. Shivangi for the sweet gesture and proper treatment in the 9th month of pregnancy. Dr. Shivangi gave me treatment anytime over phone, WhatsApp which was easy for me. We are blessed with a son... Good Gynecologist."</p>
+          <span>— Shilpa Lanjulkar</span>
         </div>
-    </header>
+        <div class="testimonial">
+          <p>"Thank you so much for your kind guidance and support. Doctor takes very good care of patients and helped us have a normal delivery of a healthy baby boy weighing 2700 gm. Dr. Shivangi ma'am was available on phone and WhatsApp, which made things very easy for us."</p>
+          <span>— Abhijit Tabe</span>
+        </div>
+        <div class="testimonial">
+          <p>"Dr. Shivangi has always been so patient to understand my problems in detail and provide the right guidance. Her suggestions are never orthodox and I always feel comfortable sharing all my concerns."</p>
+          <span>— Arusha Bhambri</span>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
 
-    <section class="banner">
-        <img src="https://source.unsplash.com/1600x600/?healthcare,women" alt="Clinic Banner">
-    </section>
+  <footer>
+    <p>&copy; 2025 Gynocare Clinic. All rights reserved.</p>
+  </footer>
 
-    <section class="about">
-        <h2>About the Clinic</h2>
-        <p>Gynocare is a state-of-the-art gynecology clinic located in the heart of Kharadi, Pune. Led by Dr. Shivangi Chaturvedi, a compassionate and experienced gynecologist, we provide a full spectrum of women's health services in a calm and welcoming environment.</p>
-    </section>
+  <script>
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
 
-    <section class="details">
-        <h2>Clinic Details</h2>
-        <ul>
-            <li><strong>Address:</strong> Office #301 (3rd Floor), Global Business Hub, Kharadi Rd, opposite Dholepatil Farms Road, EON Free Zone, Kharadi, Pune, Maharashtra 411014</li>
-            <li><strong>Phone:</strong> +91-9922253747</li>
-            <li><strong>Timings:</strong> Mon–Sat: 10 AM – 12:30 PM & 6 PM – 8:30 PM, Sun: 11:30 AM – 1:30 PM</li>
-        </ul>
-    </section>
+    function showTestimonial(index) {
+      testimonials.forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+        dots[i].classList.toggle('active', i === index);
+      });
+    }
 
-    <section class="appointments">
-        <h2>Book an Appointment</h2>
-        <p>Schedule a visit at your convenience:</p>
-        <a href="https://calendly.com/drshivangichaturvedi/15min" target="_blank" class="btn">Book via Calendly</a>
-    </section>
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      showTestimonial(currentIndex);
+    });
 
-    <section class="map">
-        <h2>Find Us</h2>
-        <iframe src="https://www.google.com/maps?q=Office%20%23301%20(3rd%20Floor)%2C%20Global%20Business%20Hub%2C%20Kharadi%20Rd%2C%20opposite%20Dholepatil%20Farms%20Road%2C%20EON%20Free%20Zone%2C%20Kharadi%2C%20Pune%2C%20Maharashtra%20411014&output=embed"
-                width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
-    </section>
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(currentIndex);
+    });
 
-    <footer>
-        <p>&copy; 2025 Gynocare Clinic | All Rights Reserved</p>
-    </footer>
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        showTestimonial(currentIndex);
+      });
+    });
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      showTestimonial(currentIndex);
+    }, 7000);
+  </script>
 </body>
 </html>
