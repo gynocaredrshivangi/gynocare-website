@@ -110,3 +110,9 @@ section {
     text-align: center;
   }
 }
+@media (max-width: 600px) {
+  header {
+    padding: 10px 5px;      /* less vertical padding */
+    font-size: 20px;         /* smaller font */
+  }
+}
