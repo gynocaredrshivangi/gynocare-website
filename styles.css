@@ -1,134 +1,95 @@
 body {
-  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #fff0f6;
+  margin: 0;
+  padding: 0;
+  background: #fff0f5;
   color: #333;
 }
 
-.main-header {
-  background: linear-gradient(to right, #f8c4ec, #e3b1f5);
-  padding: 20px 0;
+header {
+  background: linear-gradient(to right, #e0aaff, #ffc0cb);
+  color: white;
+  padding: 1rem 0;
   text-align: center;
-  color: #8a2be2;
-  font-size: 2.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about-section {
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.doctor-section {
   display: flex;
   flex-wrap: wrap;
-  padding: 30px 20px;
-  background: #fff;
   justify-content: center;
-  gap: 30px;
+  align-items: center;
+  background: #ffe6f1;
+  padding: 2rem;
 }
 
-.about-left {
-  text-align: center;
-  flex: 1;
-  min-width: 250px;
+.doctor-image img {
+  width: 220px;
+  border-radius: 12px;
+  margin: 1rem;
 }
 
-.about-left img {
-  width: 250px;
-  border-radius: 10px;
-  margin-bottom: 10px;
+.doctor-info {
+  max-width: 400px;
+  margin: 1rem;
 }
 
-.about-left h2 {
-  color: #b44ea5;
-  margin: 0;
+.degrees {
+  font-weight: bold;
+  color: #c71585;
 }
 
-.about-right {
-  flex: 2;
-  min-width: 250px;
-  text-align: left;
-}
-
-.about-right h2 {
-  color: #b44ea5;
-}
-
-#services {
-  background-color: #fce4f7;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-#services h2 {
-  color: #8a2be2;
-  margin-bottom: 20px;
-}
-
-#services ul {
+.services-section ul {
   list-style: none;
   padding: 0;
-  text-align: left;
-  display: inline-block;
-}
-
-#services li {
-  padding: 5px 0;
-}
-
-.timings,
-.address,
-.contact,
-.testimonials {
-  padding: 30px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.timings h2,
-.address h2,
-.contact h2,
-.testimonials h2 {
-  color: #8a2be2;
-  margin-bottom: 10px;
-}
-
-.map {
-  padding: 20px;
+  line-height: 1.8;
 }
 
 .testimonials blockquote {
-  background: #f9d9f3;
-  border-left: 5px solid #c71585;
-  margin: 15px 0;
-  padding: 10px 15px;
+  background: #fff;
+  border-left: 5px solid #da70d6;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 600px;
   font-style: italic;
-  border-radius: 5px;
+  background-color: #ffe6f1;
+}
+
+.contact iframe {
+  margin-top: 1rem;
+  border-radius: 10px;
 }
 
 .floating-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #d26ac2;
+  background-color: #da70d6;
   color: white;
-  padding: 12px 18px;
+  padding: 0.8rem 1.4rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  transition: background 0.3s ease;
 }
 
-.floating-btn:hover {
-  background: #b44ea5;
-}
-
-@media screen and (max-width: 768px) {
-  .about-section {
+@media (max-width: 768px) {
+  .doctor-section {
     flex-direction: column;
-    align-items: center;
   }
 
-  .about-left img {
-    width: 200px;
+  .floating-btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
   }
 }
