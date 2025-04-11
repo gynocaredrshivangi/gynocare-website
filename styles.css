@@ -1,148 +1,134 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #fff0f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff0f6;
   color: #333;
 }
 
-header {
-  background: linear-gradient(135deg, #ff99cc, #cc66ff);
-  color: white;
+.main-header {
+  background: linear-gradient(to right, #f8c4ec, #e3b1f5);
+  padding: 20px 0;
   text-align: center;
-  padding: 40px 20px;
-}
-
-header .doctor-photo {
-  width: 140px;
-  max-width: 40vw;
-  height: auto;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  margin-bottom: 20px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  header .doctor-photo {
-    width: 180px;
-    max-width: 25vw;
-  }
-}
-
-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-section#about {
-  background-color: #ffe6f0;
-}
-
-section#services {
-  background-color: #f5e6ff;
-}
-
-section h2 {
-  font-size: 28px;
-  color: #99004d;
-  margin-bottom: 20px;
-}
-
-section p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto 20px;
-}
-
-section ul {
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-section ul li {
-  font-size: 18px;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  color: #660066;
-}
-
-a.btn {
-  display: inline-block;
-  background: #cc66ff;
-  color: white;
-  padding: 12px 24px;
-  margin-top: 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a.btn:hover {
-  background: #b300b3;
-}
-
-.map-container {
-  margin: 20px 0;
-}
-
-footer {
-  background-color: #ffccff;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
+  color: #8a2be2;
+  font-size: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-section {
-  background-color: #ffe6f0;
-  padding: 60px 20px;
-}
-
-.about-container {
   display: flex;
   flex-wrap: wrap;
+  padding: 30px 20px;
+  background: #fff;
   justify-content: center;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  gap: 40px;
+  gap: 30px;
 }
 
-.about-left, .about-right {
-  flex: 1 1 300px;
+.about-left {
   text-align: center;
+  flex: 1;
+  min-width: 250px;
 }
 
-.about-left h2 {
-  margin-top: 20px;
-  color: #99004d;
-}
-
-.doctor-about-photo {
-  width: 180px;
-  height: auto;
-  border-radius: 50%;
-  border: 4px solid #cc66ff;
-}
-
-.about-right h2 {
-  color: #cc33aa;
+.about-left img {
+  width: 250px;
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
-.about-right p {
-  font-size: 17px;
-  line-height: 1.6;
-  color: #333;
+.about-left h2 {
+  color: #b44ea5;
+  margin: 0;
 }
+
 .about-right {
+  flex: 2;
+  min-width: 250px;
   text-align: left;
+}
+
+.about-right h2 {
+  color: #b44ea5;
+}
+
+#services {
+  background-color: #fce4f7;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+#services h2 {
+  color: #8a2be2;
+  margin-bottom: 20px;
 }
 
 #services ul {
+  list-style: none;
+  padding: 0;
   text-align: left;
   display: inline-block;
-  margin: 0 auto;
 }
 
+#services li {
+  padding: 5px 0;
+}
 
+.timings,
+.address,
+.contact,
+.testimonials {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.timings h2,
+.address h2,
+.contact h2,
+.testimonials h2 {
+  color: #8a2be2;
+  margin-bottom: 10px;
+}
+
+.map {
+  padding: 20px;
+}
+
+.testimonials blockquote {
+  background: #f9d9f3;
+  border-left: 5px solid #c71585;
+  margin: 15px 0;
+  padding: 10px 15px;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #d26ac2;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.floating-btn:hover {
+  background: #b44ea5;
+}
+
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-left img {
+    width: 200px;
+  }
+}
