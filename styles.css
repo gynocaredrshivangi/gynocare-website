@@ -6,17 +6,21 @@ body {
   line-height: 1.6;
 }
 
-header {
-  background: linear-gradient(135deg, #ff99cc, #cc66ff);
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 10px;
+  background: linear-gradient(90deg, #ffb6c1, #d291f4);
   color: white;
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-  padding: 15px 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(204, 102, 255, 0.4);
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.header-icon {
+  width: 32px;
+  height: 32px;
 }
 
 
