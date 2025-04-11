@@ -1,95 +1,109 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #fff0f5;
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff0f6;
+  color: #4a004d;
+  line-height: 1.6;
 }
 
 header {
-  background: linear-gradient(to right, #e0aaff, #ffc0cb);
+  background: linear-gradient(90deg, #ff99cc, #cc66ff);
+  padding: 20px;
+  text-align: center;
   color: white;
-  padding: 1rem 0;
-  text-align: center;
+  font-size: 2em;
 }
 
-h1 {
-  margin: 0;
-  font-size: 2.2rem;
-}
-
-section {
-  padding: 2rem;
-  text-align: center;
-}
-
-.doctor-section {
+.hero {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: #ffe6f1;
-  padding: 2rem;
+  background: #ffe6f0;
+  padding: 30px 20px;
+  text-align: center;
 }
 
-.doctor-image img {
+.doctor-photo {
   width: 220px;
-  border-radius: 12px;
-  margin: 1rem;
+  border-radius: 15px;
+  margin: 10px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.doctor-info {
+.doctor-intro {
   max-width: 400px;
-  margin: 1rem;
+  margin: 10px;
 }
 
-.degrees {
-  font-weight: bold;
-  color: #c71585;
+section {
+  padding: 30px 20px;
+  text-align: center;
 }
 
-.services-section ul {
+.services ul {
   list-style: none;
   padding: 0;
-  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.services li {
+  background: #fbd2f4;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 .testimonials blockquote {
-  background: #fff;
-  border-left: 5px solid #da70d6;
-  margin: 1rem auto;
-  padding: 1rem;
+  background: #f3d5f7;
+  border-left: 5px solid #cc66ff;
+  margin: 20px auto;
+  padding: 15px;
   max-width: 600px;
-  font-style: italic;
-  background-color: #ffe6f1;
+  border-radius: 10px;
 }
 
-.contact iframe {
-  margin-top: 1rem;
-  border-radius: 10px;
+.testimonials span {
+  display: block;
+  text-align: right;
+  font-style: italic;
+  color: #6b006b;
+  margin-top: 10px;
+}
+
+.timings, .location {
+  background: #ffe0f0;
+  padding: 20px;
+  border-top: 2px solid #ff99cc;
+  border-bottom: 2px solid #cc66ff;
 }
 
 .floating-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #da70d6;
+  background: #cc33cc;
   color: white;
-  padding: 0.8rem 1.4rem;
-  border-radius: 50px;
-  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 30px;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.floating-btn:hover {
+  background: #b300b3;
 }
 
 @media (max-width: 768px) {
-  .doctor-section {
+  .hero {
     flex-direction: column;
   }
-
-  .floating-btn {
-    font-size: 0.9rem;
-    padding: 0.7rem 1.2rem;
+  .services ul {
+    text-align: center;
   }
 }
