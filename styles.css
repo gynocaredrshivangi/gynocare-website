@@ -1,0 +1,75 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #fdfdfd;
+  line-height: 1.6;
+}
+
+a {
+  color: #d14d72;
+  text-decoration: none;
+}
+
+header.hero {
+  background: url('https://images.unsplash.com/photo-1588776814546-ec7f3c1e3b7a?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #d14d72;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.section {
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.section h2 {
+  color: #d14d72;
+  margin-bottom: 15px;
+}
+
+.section ul {
+  list-style: disc inside;
+  padding-left: 0;
+}
+
+.doctor-profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.doctor-profile img {
+  max-width: 250px;
+  border-radius: 8px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  color: #888;
+  font-size: 0.9em;
+}
