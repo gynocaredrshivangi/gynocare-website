@@ -7,12 +7,15 @@ body {
 }
 
 header {
-  background: linear-gradient(90deg, #ff99cc, #cc66ff);
-  padding: 20px;
-  text-align: center;
+  background: linear-gradient(135deg, #f7c6d9, #d2a8f7);
   color: white;
-  font-size: 2em;
+  padding: 20px 10px; /* reduced padding */
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 0 0 20px 20px;
 }
+
 
 .hero {
   display: flex;
