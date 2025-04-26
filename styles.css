@@ -169,3 +169,25 @@ section {
 .floating-profile:hover {
     background-color: #c2185b; /* Darker shade for hover effect */
 }
+
+.collapsed {
+    overflow: hidden;
+    height: 60px; /* Adjust this height to show the initial part of the text */
+    transition: height 0.3s ease;
+}
+
+.expanded {
+    height: auto;
+}
+
+#read-more {
+    display: block;
+    margin-top: 10px;
+    color: #e91e63; /* Match the color to your website's theme */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#read-more:hover {
+    text-decoration: underline;
+}
